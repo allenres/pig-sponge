@@ -33,7 +33,18 @@ public class Sponge {
 
   // Implement your solution here!
   public static String spongeCase(String sentence) {
-    return null;
+    String result = "";
+    String lowerCaseSentence = sentence.toLowerCase();
+    String upperCaseSentence = sentence.toUpperCase();
+    result += lowerCaseSentence.charAt(0);
+    for(int i = 1; i < sentence.length(); i++) {
+      if (i % 2 != 0) {
+        result += upperCaseSentence.charAt(i);
+      } else {
+        result += lowerCaseSentence.charAt(i);
+      }
+    }
+    return result;
   }
 
 
